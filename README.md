@@ -72,11 +72,17 @@ pip install -r requirements.txt
 
 ##  Project Structure
 
+```
+│
 ├── notebooks/
-│   ├── v1_basic_lstm.ipynb       # Baseline model
-│   └── v2_bilstm_glove.ipynb     # Improved model
+│   ├── v1_basic_lstm.ipynb        # Baseline LSTM model
+│   └── v2_bilstm_glove.ipynb      # Improved BiLSTM + GloVe model
+│
 ├── results/
-│   ├── training_history.png
-│   └── confusion_matrix.png
+│   ├── training_history.png       # Accuracy & loss curves
+│   └── confusion_matrix.png       # Model evaluation heatmap
+│
+├── .gitignore
 ├── requirements.txt
 └── README.md
+```
