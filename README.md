@@ -30,9 +30,9 @@ movie reviews using deep learning.
 
 ---
 
-##  Model Architecture (v2)
+## 🏗️ Model Architecture (v2)
 
-
+```
 Embedding (GloVe 100d — frozen)
           ↓
 Bidirectional LSTM (128 units, dropout=0.3)
@@ -42,6 +42,7 @@ GlobalMaxPooling1D
 Dense (64 units, ReLU) + Dropout(0.3)
           ↓
 Dense (1 unit, Sigmoid)
+```
 
 --- 
 
