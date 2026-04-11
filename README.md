@@ -17,13 +17,6 @@ movie reviews using deep learning.
 
 ---
 
-## 📊 Training Performance
-
-![Training History](results/training_history.png)
-![Confusion Matrix](results/confusion_matrix.png)
-
----
-
 ## 🔧 Improvements from v1 → v2
 
 | Area | v1 (Basic LSTM) | v2 (BiLSTM + GloVe) |
