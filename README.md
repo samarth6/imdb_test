@@ -17,7 +17,7 @@ movie reviews using deep learning.
 
 ---
 
-## 🔧 Improvements from v1 → v2
+##  Improvements from v1 → v2
 
 | Area | v1 (Basic LSTM) | v2 (BiLSTM + GloVe) |
 |---|---|---|
@@ -30,4 +30,53 @@ movie reviews using deep learning.
 
 ---
 
-## 🏗️ Model Architecture (v2)
+##  Model Architecture (v2)
+
+
+Embedding (GloVe 100d, frozen)
+↓
+Bidirectional LSTM (128 units, dropout=0.3)
+↓
+GlobalMaxPooling1D
+↓
+Dense (64, ReLU) + Dropout(0.3)
+↓
+Dense (1, Sigmoid)
+
+--- 
+
+ How to Run
+
+1. Clone the repo
+```bash
+git clone https://github.com/samarth6/IMDB_sentiment_analysis
+cd IMDB_sentiment_analysis
+```
+
+2. Install dependencies
+```bash
+pip install -r requirements.txt
+```
+
+3. Open notebook in Google Colab  
+   - v1 Basic: `notebooks/v1_basic_lstm.ipynb`  
+   - v2 Improved: `notebooks/v2_bilstm_glove.ipynb`
+
+---
+
+##  Tech Stack
+
+`Python` `TensorFlow` `Keras` `GloVe` `NumPy` `Pandas` `Scikit-learn` `Matplotlib` `Seaborn`
+
+---
+
+##  Project Structure
+
+├── notebooks/
+│   ├── v1_basic_lstm.ipynb       # Baseline model
+│   └── v2_bilstm_glove.ipynb     # Improved model
+├── results/
+│   ├── training_history.png
+│   └── confusion_matrix.png
+├── requirements.txt
+└── README.md
